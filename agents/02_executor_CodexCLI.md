@@ -2,6 +2,8 @@
 
 > **役割**: ②実装と実行（ロボット操作はユーザー）
 > **実行環境**: PC-C
+>
+> **【2026-09-28更新】実行役はCodex CLIからChatGPT Works/Codex（デスクトップアプリケーション）へ変更された。** 本文書の役割定義（PS1方式の実行・安全条件・報告）はそのままChatGPT Works/Codexが踏襲する。依頼の受け渡しはこれまで通り`handoff/DXMV04-H-###`で行うが、実際の入力・送信はユーザーが手動で行う（Claude Codeは依頼文書の更新までを担当）。経緯は`memory/knowledge/handoff_state.md`参照。
 
 ## あなたの役割
 

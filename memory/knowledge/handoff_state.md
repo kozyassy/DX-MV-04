@@ -1,6 +1,6 @@
 ---
 name: handoff-state
-description: 【次セッションはまずこれ】2026-09-28、マスター（Hermes）への実行委託を終了し、①統括＋立案をClaude Codeが③レビューと兼任することになった。校正はC段階完了、D段階（校正点データ最新化）をCodex CLIへ委任中。詳細は本文末尾の追記セクションを参照。
+description: 【次セッションはまずこれ】2026-09-28、マスター（Hermes）への実行委託を終了し①統括＋立案をClaude Codeが③レビューと兼任、②実装と実行もCodex CLIからChatGPT Works/Codex（デスクトップアプリ）へ変更。Orchestrationはファイル更新のみ（Claude Codeは他アプリを直接操作しない）。D段階の依頼はDXMV04-H-003としてユーザーの手動投入待ち。詳細は本文末尾の追記セクションを参照。
 type: project
 ---
 
@@ -140,6 +140,28 @@ type: project
 
 - Claude Codeは今後、ユーザーと直接会話しながら計画を立て、Codex CLIへの依頼発行（`handoff/DXMV04-H-###`作成）・進捗管理（`handoff/board.md`更新）・結果レビューを一貫して行う
 - ロボット動作を伴う操作はこれまでどおりユーザーの明示的承認なしに自動化・連続実行しない（安全条件は変更なし）
+
+## 【2026-09-28・訂正＋実行役変更】D段階未送信の判明、Codex CLI→ChatGPT Works/Codex、Orchestration方式の合意
+
+**撤回対象：上記「体制変更」節に記載した「Hermesが本人退場前にCodex CLIへD段階を委任した」という記述は誤り。** ユーザーからの指摘により判明：Hermesの不具合により、D段階の依頼は`handoff/board.md`上に記録されただけで、実行系（Codex CLI）へは実際には送信されていなかった。
+
+### 訂正・変更内容
+
+1. **D段階は未送信だった** → `handoff/DXMV04-H-002.md`を撤回し、正しい依頼として`handoff/DXMV04-H-003.md`を新規作成
+2. **実行役を変更**：②実装と実行＝Codex CLI → **ChatGPT Works/Codex（デスクトップアプリケーション）**（ユーザー指示、2026-09-28）
+3. **Orchestration方式の合意**：Claude Codeが実行系デスクトップアプリ（ChatGPT Works/Codex）をcomputer-useで直接操作できるか試みたところ、ユーザーがアクセス許可を拒否。ユーザーに確認したところ、以下で合意：
+   - **Claude Codeは依頼文書（`handoff/DXMV04-H-###`）・`handoff/board.md`・`handoff/INDEX.md`の更新までを行う**
+   - **実行系アプリ（ChatGPT Works/Codex）への実際の入力・送信はユーザーが手動で行う**
+   - Claude Codeは他アプリケーションをcomputer-useで直接操作しない（今回のスコープでは）
+
+### 反映済みファイル
+
+`CLAUDE.md`、`AGENTS.md`、`agents/README.md`、`agents/02_executor_CodexCLI.md`、`handoff/board.md`、`handoff/INDEX.md`、`handoff/DXMV04-H-002.md`（撤回注記）、`handoff/DXMV04-H-003.md`（新規）
+
+### 現在の状態
+
+- D段階の依頼は`handoff/DXMV04-H-003.md`として作成済み。ユーザーがChatGPT Works/Codexへ手動投入するのを待っている段階
+- 完了後、Claude CodeがC段階（整合性確認）→ A段階（Work移行判断）を実施
 
 ## 索引
 

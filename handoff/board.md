@@ -2,14 +2,18 @@
 
 ## 体制変更（2026-09-28）
 
-**マスター（Hermes）への実行委託を終了し、①統括＋立案はClaude Codeが③レビューと兼任する。** 経緯は`memory/knowledge/handoff_state.md`参照。Hermesが引き継ぎ直前にCodex CLIへ委任したD段階は、`handoff/DXMV04-H-002.md`として事後記録し、Claude Codeが監督を引き継いだ。
+**マスター（Hermes）への実行委託を終了し、①統括＋立案はClaude Codeが③レビューと兼任する。** 経緯は`memory/knowledge/handoff_state.md`参照。
+
+**訂正**：`DXMV04-H-002`は「HermesがD段階をCodex CLIへ委任済み」という前提で事後記録されたが、**Hermesの不具合により実際には実行系へ送信されていなかった**（board.md上の記録のみ）。あわせて実行役をCodex CLIからChatGPT Works/Codex（デスクトップアプリケーション）に変更し、`DXMV04-H-003`として依頼を作成し直した。
+
+**Orchestration方式（2026-09-28合意）**：Claude Codeは依頼文書・`board.md`・`INDEX.md`の更新までを行う。ChatGPT Works/Codexアプリへの実際の入力・送信はユーザーが手動で行う（Claude Codeはデスクトップアプリを直接操作しない）。
 
 ## 現在の手番
 
 | エージェント | 状態 | 次のアクション |
 |---|---|---|
-| Claude Code（①統括＋立案／③レビュー兼任） | 校正完了フェーズ移行済み（C段階完了）。D段階（校正点データ最新化）をCodex CLIに委任中（`DXMV04-H-002`） | Codex CLIからのD完了報告待ち。届き次第C段階（整合性確認）を実施し、A段階（Work移行判断）へ |
-| Codex CLI（実行） | **着手** | D段階：IPC校正画面から最新校正点データを確認し、`calibration_points_message_log.csv`を最新データに書き換える。IPC操作方法はUserと相談して決定 |
+| Claude Code（①統括＋立案／③レビュー兼任） | 校正完了フェーズ移行済み（C段階完了）。D段階の依頼を`DXMV04-H-003`として作成済み | ユーザーがChatGPT Works/Codexへ手動投入するのを待つ。完了報告が届き次第C段階（整合性確認）を実施し、A段階（Work移行判断）へ |
+| ChatGPT Works/Codex（実行、デスクトップアプリ） | 未着手（依頼はユーザーからの手動投入待ち） | D段階：IPC校正画面から最新校正点データを確認し、`calibration_points_message_log.csv`を最新データに書き換える（`DXMV04-H-003`参照） |
 
 ## 完了済み（C段階）
 
@@ -32,8 +36,9 @@
 
 - [x] 校正点再調整 → 合格範囲に収まる結果（ユーザー観測、2026-09-28）
 - [x] 校正結果画像確認（Mech-Vision外部パラメータ校正レポート、3項目合格）
-- [x] マスターが前回校正点メッセージ一覧表を読み、Codex CLIにD段階委任（このターン）
-- [ ] **D**: Codex CLIがIPC校正画面から最新の校正点データを収集し、一覧表（`calibration_points_message_log.csv`）を最新データに更新
+- [x] ~~マスターが前回校正点メッセージ一覧表を読み、Codex CLIにD段階委任（このターン）~~ **訂正：実際には未送信だった（`DXMV04-H-002`参照）**
+- [x] Claude CodeがD段階の依頼を`DXMV04-H-003`として作成、実行役をChatGPT Works/Codexに変更
+- [ ] **D**: ChatGPT Works/CodexがIPC校正画面から最新の校正点データを収集し、一覧表（`calibration_points_message_log.csv`）を最新データに更新
 - [ ] **C**: 更新結果をClaude Codeがレビュー（最新校正画面との整合性、数値整合、pose対応）
 - [ ] **A**: 校正完了確定 → Workフェーズ（フェーズ0-①カメラ再校正の計画済み内容）へ移行するか判断
 
