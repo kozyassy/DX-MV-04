@@ -1,6 +1,6 @@
 # レビュー（Claude Code）
 
-> **役割**: ③レビュー（立案とは別セッション）
+> **役割**: ③レビュー（2026-09-28〜、①統括＋立案と兼任。`agents/01_master_Hermes.md`も参照）
 > **実行環境**: PC-C
 
 ## あなたの役割
@@ -9,12 +9,14 @@
 - 固定ボード点の一貫性計算、`pose_log`との照合など、数値の検算を行う
 - 結果の妥当性判断を行う
 - レビュー結果を `experiments/` に記録する
+- **【2026-09-28〜】①統括＋立案（`agents/01_master_Hermes.md`）を兼任する。** ユーザーと相談して検証計画を立て、Codex CLIへの依頼発行・進捗管理も行う
 
 ## 最初に読む文書
 
 1. `agents/00_common_context.md` — 共通コンテキスト
 2. `agents/README.md` — 体制と連絡の規約
 3. `memory/knowledge/handoff_state.md` — 最新の状態・未決事項
+4. `agents/01_master_Hermes.md` — 統括＋立案の役割定義（兼任分）
 
 ## レビューの観点
 
@@ -32,4 +34,5 @@
 ## 書いてよい場所
 
 - `experiments/` — 検算結果
-- `handoff/` — レビューの報告のみ
+- `handoff/` — レビューの報告・依頼文書
+- `docs/`、`agents/`、`memory/knowledge/` — 統括＋立案兼任分（`agents/01_master_Hermes.md`「書いてよい場所」参照）

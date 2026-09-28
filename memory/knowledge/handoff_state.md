@@ -1,6 +1,6 @@
 ---
 name: handoff-state
-description: 【次セッションはまずこれ】2026-09-28時点、C段階（IPC校正データ読取り専用確認）完了、C-4（ユーザー手動取得データでの合格判定）待ち。フェーズ0-①計画レビューはD1-D7とも決定済み（2026-09-25）。詳細は本文末尾の追記セクションを参照。
+description: 【次セッションはまずこれ】2026-09-28、マスター（Hermes）への実行委託を終了し、①統括＋立案をClaude Codeが③レビューと兼任することになった。校正はC段階完了、D段階（校正点データ最新化）をCodex CLIへ委任中。詳細は本文末尾の追記セクションを参照。
 type: project
 ---
 
@@ -118,6 +118,28 @@ type: project
 1. ユーザー手動取得データはコスト安 → 実行前に「コスト安であること」を提示する
 2. コスト判断は実行前に予想して行い、繰り返し判断しない
 3. 一つの項目で間違いを発見したら、他のデータも間違いではないかと疑い再確認する
+
+## 【2026-09-28・体制変更】マスター（Hermes）への実行委託終了、Claude Codeが統括を兼任
+
+**ユーザーが、マスター（Hermes）に実行を委託できないと判断した。** これを受け、①統括＋立案の役割をClaude Codeが③レビューと兼任することになった。
+
+### 変更内容
+
+- ①統括＋立案＝Claude Code（③レビューと兼任）、②実装と実行＝Codex CLI（変更なし）、③レビュー＝Claude Code（変更なし）
+- Claude Codeの「書いてよい場所」が拡張：`docs/`、`handoff/`、`agents/`、`memory/knowledge/`、`experiments/`（旧マスターの権限を統合）
+- 反映済みファイル：`CLAUDE.md`、`AGENTS.md`、`agents/README.md`、`agents/01_master_Hermes.md`、`agents/03_reviewer_ClaudeCode.md`、`handoff/board.md`
+
+### 引き継いだ未完了タスク（引き継ぎ時点）
+
+- **D段階**（Hermesが本人退場前にCodex CLIへ委任、未完了）：IPC校正画面から最新校正点データを確認し、`experiments/P0-1_camera_calibration/calibration_points_message_log.csv`を最新データに書き換える。IPC操作方法はユーザーと相談して決定
+  - 前提：校正点再調整により合格範囲に収まる結果（ユーザー観測、2026-09-28）、Mech-Vision外部パラメータ校正レポートで3項目合格を確認済み
+  - この委任は口頭的にboard.mdへ記録されたのみで、正式なハンドオフ文書（`DXMV04-H-###`）を欠いていたため、引き継ぎ時にClaude Codeが`handoff/DXMV04-H-002.md`として事後記録した
+- D完了後：C段階（Claude Codeが整合性確認：最新校正画面との整合性、数値整合、pose対応）→ A段階（校正完了確定、Workフェーズへ移行するか判断）
+
+### 今後の運用
+
+- Claude Codeは今後、ユーザーと直接会話しながら計画を立て、Codex CLIへの依頼発行（`handoff/DXMV04-H-###`作成）・進捗管理（`handoff/board.md`更新）・結果レビューを一貫して行う
+- ロボット動作を伴う操作はこれまでどおりユーザーの明示的承認なしに自動化・連続実行しない（安全条件は変更なし）
 
 ## 索引
 

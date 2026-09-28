@@ -10,11 +10,13 @@
 
 → 詳細: `memory/knowledge/handoff_state.md`
 
-## Agent roles（2026-09-24〜）
+## Agent roles（2026-09-24〜、2026-09-28更新）
 
-**DX-MV-04の作業は3つのAIエージェントで分担する：①統括＋立案＝マスター（Hermes）、②実装と実行＝Codex CLI（ロボット操作はユーザー）、③レビュー＝Claude Code。** 体制・連絡方法・書いてよい場所は`agents/README.md`、共通の前提は`agents/00_common_context.md`。
+**DX-MV-04の作業は当初3つのAIエージェントで分担していた：①統括＋立案＝マスター（Hermes）、②実装と実行＝Codex CLI（ロボット操作はユーザー）、③レビュー＝Claude Code。**
 
-- **このフォルダで起動したClaude Codeは③レビュー役である。** 作業を始める前に`agents/00_common_context.md`と`agents/03_reviewer_ClaudeCode.md`に従う。
+**2026-09-28、ユーザー判断によりマスター（Hermes）への実行委託を終了し、①統括＋立案はClaude Codeが③レビューと兼任する。** ②実装と実行＝Codex CLI（ロボット操作はユーザー）は変更なし。経緯・判断は`memory/knowledge/handoff_state.md`参照。体制・連絡方法・書いてよい場所は`agents/README.md`、共通の前提は`agents/00_common_context.md`。
+
+- **このフォルダで起動したClaude Codeは①統括＋立案／③レビューの兼任役である。** 作業を始める前に`agents/00_common_context.md`、`agents/01_master_Hermes.md`（統括の内容）、`agents/03_reviewer_ClaudeCode.md`（レビューの内容）に従う。
 - エージェント間の依頼・報告は`handoff/`の引継ぎ文書（`DXMV04-H-###`）で行い、手番は`handoff/board.md`で確認する。
 - 技術ナレッジと一次証跡の正本はDX-MV-04（非公開リポジトリ）。
 
