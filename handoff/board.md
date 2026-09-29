@@ -12,8 +12,8 @@
 
 | エージェント | 状態 | 次のアクション |
 |---|---|---|
-| Claude Code（①統括＋立案／③レビュー兼任） | 校正完了フェーズ移行済み（C段階完了）。D段階の依頼を`DXMV04-H-003`として作成済み | ユーザーがChatGPT Works/Codexへ手動投入するのを待つ。完了報告が届き次第C段階（整合性確認）を実施し、A段階（Work移行判断）へ |
-| ChatGPT Works/Codex（実行、デスクトップアプリ） | 未着手（依頼はユーザーからの手動投入待ち） | D段階：IPC校正画面から最新校正点データを確認し、`calibration_points_message_log.csv`を最新データに書き換える（`DXMV04-H-003`参照） |
+| Claude Code（①統括＋立案／③レビュー兼任） | D段階完了・C段階（整合性確認）も合格判定済み（2026-09-29） | ユーザーとA段階（校正完了確定・Workフェーズ移行判断）を相談する |
+| ChatGPT Works/Codex（実行、デスクトップアプリ） | D段階完了（`DXMV04-H-003`参照） | 待機 |
 
 ## 完了済み（C段階）
 
@@ -38,8 +38,8 @@
 - [x] 校正結果画像確認（Mech-Vision外部パラメータ校正レポート、3項目合格）
 - [x] ~~マスターが前回校正点メッセージ一覧表を読み、Codex CLIにD段階委任（このターン）~~ **訂正：実際には未送信だった（`DXMV04-H-002`参照）**
 - [x] Claude CodeがD段階の依頼を`DXMV04-H-003`として作成、実行役をChatGPT Works/Codexに変更
-- [ ] **D**: ChatGPT Works/CodexがIPC校正画面から最新の校正点データを収集し、一覧表（`calibration_points_message_log.csv`）を最新データに更新
-- [ ] **C**: 更新結果をClaude Codeがレビュー（最新校正画面との整合性、数値整合、pose対応）
+- [x] **D**: ChatGPT Works/CodexがIPC校正画面から最新の校正点データを収集し、一覧表（`calibration_points_message_log.csv`）を最新データに更新（27点→29点）
+- [x] **C**: 更新結果をClaude Codeがレビュー（最新校正画面との整合性、数値整合、pose対応）→ **合格**（`experiments/P0-1_camera_calibration/C_stage_review_20260929.md`）
 - [ ] **A**: 校正完了確定 → Workフェーズ（フェーズ0-①カメラ再校正の計画済み内容）へ移行するか判断
 
 ## 未着手のフェーズ
