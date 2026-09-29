@@ -12,8 +12,8 @@
 
 | エージェント | 状態 | 次のアクション |
 |---|---|---|
-| Claude Code（①統括＋立案／③レビュー兼任） | **A段階＝校正完了を確定**（2026-09-29）。プロジェクト命名の不一致を`DXMV04-H-005`として発行済み | ユーザーが命名解釈（Project名を`MV-TST00-DX-MV04`にリネーム案）を確認するのを待つ |
-| ChatGPT Works/Codex（実行、デスクトップアプリ）またはユーザー | 未着手（`DXMV04-H-005`の命名確認・リネーム待ち） | プロジェクト`Project-01`を`MV-TST00-DX-MV04`へリネーム、証跡取得 |
+| Claude Code（①統括＋立案／③レビュー兼任） | **A段階＝校正完了を確定**（2026-09-29）。`DXMV04-H-005`の命名是正も完了 | 次フェーズの立案・依頼を行う |
+| ChatGPT Works/Codex（実行、デスクトップアプリ）またはユーザー | `DXMV04-H-005`完了。Project名`MV-TST00-DX-MV04`を画面・ログで確認済み | 次の依頼待ち |
 
 ## 完了済み（C段階）
 
@@ -41,7 +41,7 @@
 - [x] **D**: ChatGPT Works/CodexがIPC校正画面から最新の校正点データを収集し、一覧表（`calibration_points_message_log.csv`）を最新データに更新（27点→29点）
 - [x] **C**: 更新結果をClaude Codeがレビュー（最新校正画面との整合性、数値整合、pose対応）→ **合格**（`experiments/P0-1_camera_calibration/C_stage_review_20260929.md`）
 - [x] **A**: 校正完了確定（2026-09-29、`experiments/P0-1_camera_calibration/A_stage_decision_20260929.md`）。点群誤差・外部パラメータ校正レポート3項目は良好。独立検算・新旧差比較は今後の課題として保留（ユーザー決定）
-- [ ] **命名是正**: プロジェクト名がD6決定（`MV-TST00-DX-MV04`）と不一致（現状 Solution「DX-MV-04」＞ Project「Project-01」）。`DXMV04-H-005`でWorkフェーズ移行前の是正を依頼中
+- [x] **命名是正**: Solution名`DX-MV-04`を維持し、Project名を`MV-TST00-DX-MV04`へ変更（2026-09-29、`DXMV04-H-005`、ユーザー実施・Codex確認）
 
 ## 未着手のフェーズ
 
