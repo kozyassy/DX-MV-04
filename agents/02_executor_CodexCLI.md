@@ -40,7 +40,7 @@
 
 - 依頼文書（`handoff/DXMV04-H-###`）に結果を追記する
 - `handoff/board.md`を更新する
-- コミットメッセージにはIssue番号を併記する
+- **`git commit`・`git push`は行わない。** ファイルの作成・編集（担当場所内）までとし、コミットはClaude Codeがユーザーの指示を受けて行う（2026-09-29〜、`agents/README.md`運用ルール7参照）
 
 ## 書いてよい場所
 
